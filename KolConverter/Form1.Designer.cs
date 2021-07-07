@@ -30,13 +30,14 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.filterBox = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
-            this.filterBox = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +45,7 @@
             // button1
             // 
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(1034, 34);
+            this.button1.Location = new System.Drawing.Point(1291, 34);
             this.button1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(238, 65);
@@ -55,6 +56,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.filterBox);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button4);
@@ -68,6 +70,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(3303, 210);
             this.panel2.TabIndex = 3;
+            // 
+            // filterBox
+            // 
+            this.filterBox.Location = new System.Drawing.Point(46, 131);
+            this.filterBox.Name = "filterBox";
+            this.filterBox.Size = new System.Drawing.Size(1210, 44);
+            this.filterBox.TabIndex = 7;
+            this.filterBox.TextChanged += new System.EventHandler(this.filterBox_TextChanged);
             // 
             // button5
             // 
@@ -93,7 +103,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1547, 48);
+            this.label1.Location = new System.Drawing.Point(1807, 48);
             this.label1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(308, 37);
@@ -102,7 +112,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1291, 34);
+            this.button3.Location = new System.Drawing.Point(1549, 37);
             this.button3.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(238, 65);
@@ -113,7 +123,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(776, 34);
+            this.button2.Location = new System.Drawing.Point(1033, 34);
             this.button2.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(238, 65);
@@ -137,13 +147,16 @@
             this.objectListView1.UseCompatibleStateImageBehavior = false;
             this.objectListView1.View = System.Windows.Forms.View.Details;
             // 
-            // filterBox
+            // button6
             // 
-            this.filterBox.Location = new System.Drawing.Point(46, 131);
-            this.filterBox.Name = "filterBox";
-            this.filterBox.Size = new System.Drawing.Size(1210, 44);
-            this.filterBox.TabIndex = 7;
-            this.filterBox.TextChanged += new System.EventHandler(this.filterBox_TextChanged);
+            this.button6.Location = new System.Drawing.Point(635, 34);
+            this.button6.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(238, 65);
+            this.button6.TabIndex = 8;
+            this.button6.Text = "Torch";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
             // 
@@ -172,6 +185,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox filterBox;
+        private System.Windows.Forms.Button button6;
     }
 }
 

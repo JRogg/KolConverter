@@ -198,5 +198,42 @@ namespace KolConverter
         {
             ItemManager.FilterItems(objectListView1,filterBox.Text);
         }
+
+        private void CreateTorches()
+        {
+            FolderBrowserDialog folderDialog = new FolderBrowserDialog();
+
+            folderDialog.SelectedPath = Path;
+            if (folderDialog.ShowDialog() == DialogResult.OK)
+            {
+                ItemManager.Clear();
+                ReadTorchFolders(folderDialog.SelectedPath);
+
+                 
+            }
+
+        }
+        private void ReadTorchFolders(string path)
+        {
+            string[] fileEntries = Directory.GetFiles(path);
+            foreach (string fileName in fileEntries)
+            {
+                string fileExt = System.IO.Path.GetExtension(fileName);
+                if (fileExt == ".txt")
+                {
+                    ItemManager.ListTorches(fileName);
+                }
+            }
+            string[] subdirectoryEntries = Directory.GetDirectories(path);
+            foreach (string subdirectory in subdirectoryEntries)
+                ReadTorchFolders(subdirectory);
+            ItemManager.TorchesToClipboard();
+
+        }
+        private void button6_Click(object sender, EventArgs e)
+        {
+            CreateTorches();
+
+        }
     }
 }

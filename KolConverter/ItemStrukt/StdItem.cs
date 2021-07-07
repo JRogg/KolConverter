@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using KolConverter.Data;
-using KolReader.ItemStrukt;
+using KolConverter.ItemStrukt;
 namespace KolConverter.ItemStrukt
 {
-    class StdItem : KolReader.Item
+    class StdItem : KolConverter.Item
     {
         public StdItem (string itemline)
         {

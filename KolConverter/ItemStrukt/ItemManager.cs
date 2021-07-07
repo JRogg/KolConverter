@@ -190,6 +190,50 @@ namespace KolReader.ItemStrukt
 
 
         }
+        public static void TorchesToClipboard() {
+            string clipresult = "" ;
+            for (int x = 0; x < 7; x++) {
+
+                foreach (Torch torch in Items)
+                {
+                    if (torch.GetAttribut(1) == x.ToString()) {  
+                        clipresult = clipresult + torch.GetAttribut(0) +
+                                  Environment.NewLine;
+                    }
+                }
+            }
+            Clipboard.SetText(clipresult);
+        }
+        public static void ListTorches(string filename)
+        {
+            CreateTorchItems(filename);
+        }
+
+        private static void CreateTorchItems(string filename)
+        {
+            try
+            {   // Open the text file using a stream reader.
+                using (StreamReader sr = new StreamReader(filename))
+                {
+                    String line = sr.ReadToEnd();
+                    string[] singleStrings = line.Split('{'); 
+                    foreach (string itemline in singleStrings)
+                    {
+                        if (itemline.Contains("Hellfire Torch Large Charm")) { 
+                            Items.Add(new Torch(itemline)); 
+                        }  
+                    }
+
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
+            }
+
+
+        }
 
         internal static void Clear()
         {

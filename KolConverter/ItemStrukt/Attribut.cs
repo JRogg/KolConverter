@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace KolReader.ItemStrukt
+namespace KolConverter.ItemStrukt
 {
     class Attribut
     {

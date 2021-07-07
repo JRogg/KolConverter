@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using KolReader.ItemStrukt; 
 namespace KolConverter.ItemStrukt
 {
-    class RuneItem : KolReader.Item
+    class RuneItem : KolConverter.Item
     {
         private new Boolean show;
         private readonly string[] RuneList = new string[] { "Vex", "Ohm", "Lo", "Sur", "Ber", "Jah", "Cham", "Zod" };

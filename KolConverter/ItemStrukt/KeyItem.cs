@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using KolReader.ItemStrukt; 
 namespace KolConverter.ItemStrukt
 {
-    class KeyItem : KolReader.Item
+    class KeyItem : KolConverter.Item
     {
         public Boolean IsTerror()
         {

@@ -1,5 +1,5 @@
 ﻿using KolConverter.Data;
-using KolReader.ItemStrukt;
+using KolConverter.ItemStrukt;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
@@ -8,7 +8,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks; 
 
-namespace KolReader
+namespace KolConverter
 {
     abstract class Item
     {
@@ -85,11 +85,11 @@ namespace KolReader
 
         }
 
-        public Boolean HasTag(string tag)
+        public Boolean AttributeFits(string searchattri)
         {
             foreach (Attribut attribut in Attributes)
             {
-                if (attribut.HasTag(tag))
+                if (attribut.HasTag(searchattri))
                 {
                     return true;
                 }
